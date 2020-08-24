@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="612.0" prefWidth="919.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.karam.invoice.Controller">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="195.4" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="697.5999942779541" minHeight="10.0" prefHeight="611.6" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <Pane prefHeight="618.0" prefWidth="919.0" style="-fx-background-color: #bbdefb;" GridPane.rowIndex="1">
+            <children>
+                <Label layoutX="406.0" layoutY="1.0" text="TAX INVOICE">
+                    <font>
+                        <Font name="System Bold" size="17.0" />
+                    </font>
+                </Label>
+                <Label layoutX="14.0" layoutY="36.0" text="Details of Receiver :">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Label>
+                <Label layoutX="51.0" layoutY="68.0" text="Name" />
+                <Label layoutX="51.0" layoutY="145.0" text="District" />
+                <Label layoutX="51.0" layoutY="171.0" text="GSTIN Number" />
+                <Label fx:id="error_address" layoutX="319.0" layoutY="93.0" />
+                <Label layoutX="51.0" layoutY="93.0" text="Address" />
+                <Label layoutX="51.0" layoutY="118.0" text="Ship Address" />
+                <Label fx:id="error_shipAddress" layoutX="319.0" layoutY="118.0" />
+                <Label fx:id="error_stateCode" layoutX="321.0" layoutY="196.0" />
+                <Label fx:id="error_name" layoutX="319.0" layoutY="68.0" />
+                <TextField fx:id="txtName" layoutX="166.0" layoutY="64.0" promptText="Enter name" />
+                <TextField fx:id="address" layoutX="166.0" layoutY="89.0" promptText="Enter address" />
+                <TextField fx:id="gstinNum" layoutX="166.0" layoutY="167.0" promptText="Enter GSTIN No." />
+                <TextField fx:id="shipAddress" layoutX="166.0" layoutY="114.0" promptText="Enter ship address" />
+                <TextField fx:id="invoiceNum" layoutX="682.0" layoutY="64.0" prefHeight="25.0" prefWidth="155.0" promptText="Invoice Number" />
+                <TextField fx:id="district" layoutX="166.0" layoutY="141.0" promptText="Enter district" />
+                <TextField fx:id="stateCode" layoutX="166.0" layoutY="192.0" promptText="Enter State code" />
+                <Label fx:id="error_invoiceNum" layoutX="682.0" layoutY="93.0" />
+                <Label fx:id="error_gstin" layoutX="319.0" layoutY="171.0" />
+                <Label fx:id="error_district" layoutX="319.0" layoutY="145.0" />
+                <Label layoutX="51.0" layoutY="197.0" text="State Code" />
+                <DatePicker fx:id="datePicker" layoutX="682.0" layoutY="123.0" prefHeight="25.0" prefWidth="155.0" promptText="Select Date" />
+                <Button layoutX="670.0" layoutY="237.0" mnemonicParsing="false" onAction="#addUser" text="Add" />
+                <Button layoutX="801.0" layoutY="237.0" mnemonicParsing="false" onAction="#deleteUser" text="Delete" />
+                <Button layoutX="804.0" layoutY="573.0" mnemonicParsing="false" text="Manage Order" />
+                <Button layoutX="734.0" layoutY="237.0" mnemonicParsing="false" onAction="#updateUser" text="Update" />
+                <TextField fx:id="txt_search" layoutX="670.0" layoutY="201.0" prefHeight="25.0" prefWidth="180.0" promptText="Search details" />
+                <TableView fx:id="taxTable" layoutX="11.0" layoutY="278.0" prefHeight="282.0" prefWidth="896.0">
+                    <columns>
+                        <TableColumn fx:id="colSLNum" prefWidth="50.19997978210449" text="SL. No." />
+                        <TableColumn fx:id="colInvoiceNumber" prefWidth="88.4000015258789" text="Invoice No." />
+                        <TableColumn fx:id="colName" prefWidth="156.39999389648438" text="Name" />
+                        <TableColumn fx:id="colAddress" prefWidth="154.39999389648438" text="Address" />
+                        <TableColumn fx:id="colShipAddress" prefWidth="127.79995727539062" text="Ship Address" />
+                        <TableColumn fx:id="colDistrict" prefWidth="76.800048828125" text="District" />
+                        <TableColumn fx:id="colGSTIN" prefWidth="75.199951171875" text="GSTIN No." />
+                        <TableColumn fx:id="colStateCode" prefWidth="75.79998779296875" text="State Code" />
+                        <TableColumn fx:id="colDate" prefWidth="95.7999267578125" text="Date" />
+                    </columns>
+                </TableView>
+            </children>
+        </Pane>
+    </children>
+</GridPane>
